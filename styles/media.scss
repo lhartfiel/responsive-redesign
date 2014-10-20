@@ -1,0 +1,496 @@
+// Normalize, clearfix, border-box
+@import "normalize";
+@import "grid";
+
+
+@media all and (max-width: 1130px) {
+	.teamImg {
+		width: 100%;
+		text-align: center;
+	}
+
+	.photoOverlay {
+		.photoText {
+			top: -10px;
+		}
+	}
+
+}
+
+@media all and (max-width: 950px) {
+	.photoOverlay {
+		.photoText {
+			top: -20px;
+
+			h5 {
+				font-size: 16px;
+			}
+			p,
+			img {
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+}
+
+
+@media all and (max-width: 821px) {
+
+	// Header
+	header {
+		position: relative;
+	}
+	.head {
+
+		h5 {
+			font-size: 16px;
+			line-height: 1.5;
+		}
+
+		li {
+			margin-bottom: 10px;
+
+			&:last-child {
+				margin-bottom: 200px;
+			}
+		}	
+	}
+
+	nav {
+		border-bottom: 0px;
+
+		.menuImg {
+			h4 {
+				position: absolute;
+				right: 69px; 
+				display: block;
+				color: #fff;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+		}
+
+		ul {
+			position: absolute;
+			right: 55px;
+			top: 20px;
+			margin-bottom: 0px;
+			display: none;
+		}
+
+		li {
+			float: none;
+			padding: 15px;
+			text-align: right;
+			line-height: 0;
+			margin: 8px 0 0 0;	
+
+			&:first-child {
+				margin-top: 35px;
+			}
+		}
+		&:hover ul {
+			display: block;
+		}
+		
+	}
+
+
+	// Services
+
+	.serviceType {
+
+		.btn {
+			bottom: -20px;
+		}
+	}
+
+	// Skills
+	.skillSet img {
+		width: 75%;
+	}
+
+	// Team
+
+	.teamProfile {
+		@include row;
+		@include column(12);
+		@include push(0);
+		@include pull(0);
+
+		.teamProfile1,
+		.teamProfile2,
+		.teamProfile3,
+		.teamProfile4 {
+			@include column(3);
+		}	
+
+		display: inline-block;
+	}
+
+	.teamImg {
+		width: 100%;
+		text-align: center;
+	}
+
+	.teamText {
+		.hoverImg {
+			margin-bottom: 30px;
+		}
+	}
+
+	// Process 
+	
+	.cols1 {
+		.process1,
+		.process3 {
+			width: 100%;
+			float: none;
+			margin-top: 30px;
+
+			h3 {
+				color: #d35400;
+			}
+
+		}
+
+		.process1 h3:first-child {
+			padding-top: 30px;
+		}
+
+		.processBorder {
+			.btn1 {
+				right: 0px;
+			}	
+		}	
+	}
+
+	.process img {
+		width: 8%;
+	}
+
+	.cols2 {
+		.process2,
+		.process4 {
+			width: 100%;
+			float: none;
+			margin-top: 30px;
+		}
+
+		.processBorder {
+			.btn2 {
+				left:0px;
+			}
+		}	
+	}	
+
+	// Portfolio
+	.portfolio {
+		
+		ul {
+			text-align: center;
+		}
+
+		.links li {
+			margin: 0 auto;
+			width: 17%;
+		}
+	}
+
+	.photoOverlay {
+		width: 50%;
+		float: left;
+		position: relative;
+
+		.photoText {
+		top: 50px;
+
+			p,
+			img {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+
+	// Footer
+	footer {
+
+		.footIcons img {
+			margin-right: 2px;
+		}
+	}
+}
+
+@media all and (max-width: 780px) {
+	
+	header {
+
+		.head {
+
+			h5 ul {
+				font-size: 15px;
+				padding-left: 0;
+			}
+		}
+	}
+					
+	.ThreeCol {
+		width: 90%;
+
+		.col1,
+		.col2, 
+		.col3 {
+			text-align: center;
+			float:none;
+		}
+	}
+
+	.serviceType {
+		margin-bottom: 50px;
+		margin-top: 25px;
+
+		.btn {
+			width: 25%;
+		}
+	}
+
+	.break {
+		.breakImg {
+		margin-top: 50px;
+		}
+
+		h5 {
+			margin-top: 50px;
+		}
+	}
+
+	.portfolio {
+		
+		.links li {
+			font-size: 13px;
+		}
+	}
+
+	footer {
+
+		.footBg { 
+			h5,
+			.footIcons {
+				width: 25%;
+			}
+			
+			p {
+				width: 50%;
+			}
+
+			.footIcons {
+			padding-left: 2%;
+			}
+		}	
+	}
+}
+
+@media all and (max-width: 685px) {
+	header {
+
+		.head {
+
+			h5 ul {
+				font-size: 17px;
+			}
+		}
+	}
+
+	// Photos
+
+	.portfolio .links li {
+		width: 23%;
+	}
+
+	footer {
+
+		.footBg { 
+			h5,
+			.footIcons {
+				width: 32%;
+			}
+			
+			p {
+				width: 36%;
+				font-size: 13px;
+				line-height: 1.5;
+			}
+
+			.footIcons {
+			text-align: right;
+			}
+		}	
+	}
+}
+
+@media all and (max-width: 610px) {
+	
+	// Team
+	.teamProfile {
+			@include row;
+			@include column(12);
+			@include push(0);
+			@include pull(0);
+			display: inline-block;
+
+			.teamProfile1,
+			.teamProfile2,
+			.teamProfile3,
+			.teamProfile4 {
+				@include column(6);
+			}		
+		}
+
+	.team {
+
+		h3 {
+			margin-top: 35px;
+		}
+		p {
+			margin-top: -14px;
+		}
+	}	
+	.teamBorder {
+
+		p {
+			top: 0;
+		}
+		.socialIcons {
+		bottom: -17px;
+		}	
+	}
+
+
+	// Skills
+	.skillSet {
+
+		.skill1, 
+		.skill2, 
+		.skill3, 
+		.skill4 {
+			@include column(6);
+		}
+	}
+	
+	// Portfolio Gallery
+	.photoOverlay {
+
+		.photoText {
+		top: 20px;
+		}
+	}	
+}
+
+
+@media all and (max-width: 560px) {
+	.serviceType {
+
+		.btn {
+			width: 40%;
+		}
+	}
+
+	.cols1 .processBorder {	
+		
+		img {
+			right: -30px;
+			top: -19px;
+		}
+	}	
+
+	.cols2 .processBorder {	
+		
+		img {
+			left: -30px;
+			top: -19px;
+		}
+	}
+
+	// Portfolio Gallery
+	.photoOverlay {
+
+		.photoText {
+		top: 5px;
+		}
+	}	
+
+	// Footer
+	footer {
+
+		.footBg { 
+			position: relative;
+			p {
+				width: 100%;
+			}
+
+			h5 {
+				width: 50%;
+				margin-bottom: 10px;
+			}
+
+			.footIcons {
+				position: absolute;
+				width: 50%;
+				right: 0px;
+				top: 5px;
+			}
+		}	
+	}	
+}
+
+@media all and (max-width: 480px) {
+	
+	nav {
+		.menuImg {
+			h4 {
+				right: 20px;
+			}
+		}
+		ul {
+			right: 10px;
+			font-size: 12px;
+		}	
+	}	
+
+
+	.portfolio {
+
+		.links li {
+			margin: 0 auto;
+			width: 36%;
+			margin: 0 3px 8px 3px;
+		}
+	}
+	
+}
+
+@media all and (max-width: 449px) {
+	.teamBorder {
+
+		.socialIcons {
+		bottom: 4px;
+		}	
+	}
+
+	// Portfolio Gallery - images 100% of screen
+	.photoOverlay {
+		width: 100%;
+
+		.photoText {
+		top: 30px;
+
+			p,
+			img {
+				margin-bottom: 25px;
+			}
+		}
+	}
+
+}
